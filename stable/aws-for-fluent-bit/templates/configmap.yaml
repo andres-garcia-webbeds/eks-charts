@@ -31,7 +31,7 @@ data:
         Refresh_Interval  {{ .Values.input.refreshInterval }}
 {{- end }}
 {{- if .Values.input.extraInputs }}
-{{ .Values.input.extraInputs | indent 8 }}
+{{ .Values.input.extraInputs | indent 4 }}
 {{- end }}
 
 {{- if .Values.additionalInputs }}
@@ -54,7 +54,7 @@ data:
 {{- end }}
 
 {{- if .Values.filter.extraFilters }}
-{{ .Values.filter.extraFilters | indent 8 }}
+{{ .Values.filter.extraFilters | indent 4 }}
 {{- end }}
 
 {{- if .Values.additionalFilters }}
@@ -95,7 +95,7 @@ data:
         credentials_endpoint  {{ toJson .Values.cloudWatch.credentialsEndpoint }}
         {{- end -}}
         {{- if .Values.cloudWatch.extraOutputs }}
-{{ .Values.cloudWatch.extraOutputs | indent 8 }}
+{{ .Values.cloudWatch.extraOutputs | indent 4 }}
         {{- end }}
 {{- end }}
 
